@@ -34,6 +34,7 @@ import WeatherApp from './assets/work_logo/Weather App-1.png';
 import ShoppingCart from './assets/work_logo/ShoppingApp-1.png';
 import PasswordGenerator from './assets/work_logo/Password Generator.png';
 import BlogWeb from "./assets/work_logo/BlogWebsite.png";
+import ENTNT_Talentflow from "./assets/work_logo/ENTNT_Talentflow.png";
 
 export const certificates = [
   {
@@ -180,5 +181,14 @@ export const SkillsInfo = [
       tags: ["React", "HTML", "CSS", "JavaScript"],
       github: "https://github.com/indrajeetPanjiyar/blog-website",
       webapp: "",
+    },
+    {
+      id: 5,
+      title: "ENTNT_Talentflow - Job Portal Website",
+      description: "TalentFlow is a React-based hiring management platform that streamlines recruitment by allowing HR teams to create jobs, manage candidates through various stages, and design role-specific assessments — all within a sleek, responsive interface. Built with Vite, Tailwind CSS, and IndexedDB for client-side data persistence, it delivers a seamless, backend-free experience with real-time updates and intuitive workflows.",
+      image: ENTNT_Talentflow,
+      tags: ["React", "Vite", "Tailwind CSS", "IndexedDB"],
+      github: "https://github.com/indrajeetPanjiyar/ENTNT_Talentflow",
+      webapp: "https://entnt-talentflow-inky.vercel.app/",
     },
   ];  

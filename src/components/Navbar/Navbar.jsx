@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -6,18 +6,38 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const menuRef = useRef(null);
 
-  // Detect scroll and change navbar background
+  const menuItems = [
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "work", label: "Projects" },
+    { id: "certificates", label: "Certificates" },
+    { id: "education", label: "Education" },
+  ];
+
+  // Detect scroll position for background + active section
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      const scrollPos = window.scrollY + 200;
+      menuItems.forEach((item) => {
+        const section = document.getElementById(item.id);
+        if (section) {
+          const { offsetTop, offsetHeight } = section;
+          if (scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
+            setActiveSection(item.id);
+          }
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [menuItems]);
 
-  // Smooth scroll function
+  // Smooth scroll to section on click
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
     setIsOpen(false);
@@ -28,18 +48,29 @@ const Navbar = () => {
     }
   };
 
-  const menuItems = [
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "work", label: "Projects" },
-    {id: "certificates", label: "Certificates"},
-    { id: "education", label: "Education" },
-  ];
+  // Close mobile menu if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${
-        isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
+        isScrolled
+          ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="text-white py-5 flex justify-between items-center">
@@ -57,7 +88,7 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
+              className={`cursor-pointer hover:text-[#8245ec] transition ${
                 activeSection === item.id ? "text-[#8245ec]" : ""
               }`}
             >
@@ -104,9 +135,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Items */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
+        <div 
+          ref={menuRef}
+          className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
           <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
             {menuItems.map((item) => (
               <li

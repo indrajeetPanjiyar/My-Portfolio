@@ -35,7 +35,7 @@ import ShoppingCart from './assets/work_logo/ShoppingApp-1.png';
 import PasswordGenerator from './assets/work_logo/Password Generator.png';
 import BlogWeb from "./assets/work_logo/BlogWebsite.png";
 import ENTNT_Talentflow from "./assets/work_logo/ENTNT_Talentflow.png";
-import Uber_Clone from "./assets/work_logo/UBER_Clone.png"
+import Uber_Clone from "./assets/work_logo/Uber_Logo.png"
 
 export const certificates = [
   {

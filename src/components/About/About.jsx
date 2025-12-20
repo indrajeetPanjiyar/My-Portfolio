@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import profileImage from '../../assets/profile.jpg';
 
 const About = () => {
+
+  // In your React component
+  const [stats, setStats] = useState(null);
+
+  useEffect(() => {
+    fetch('https://leetcode-stats-api.herokuapp.com/Indrajeet_Panjiyar')
+      .then(res => res.json())
+      .then(data => setStats(data));
+  }, []);
+
   return (
     <section
       id="about"
@@ -36,11 +46,12 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a full-stack developer with over 1.5 years of experience in building scalable web applications. Skilled in both front-end and back-end development, I specialize in the MERN stack and other modern technologies to create seamless user experiences and efficient solutions. I also have a strong grasp of Data Structures and Algorithms in C++ and a solid understanding of core computer science concepts such as OOPs and DBMS.
+            I am a final-year B.Tech student in Electrical and Electronics Engineering at NIT Andhra Pradesh with a deep specialization in Full Stack Development using the MERN stack. I have built and deployed scalable web applications—such as a real-time ride-hailing platform and an EdTech system—utilizing MongoDB, Express.js, React.js, and Node.js. I have a strong grasp of Data Structures and Algorithms in C++, having solved 250+ problems on LeetCode to sharpen my problem-solving skills, and I am well-versed in OOPs principles, REST APIs, and database management. With a solid foundation in both SQL and NoSQL databases, as well as version control using Git and GitHub.
           </p>
+
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/1GadSj9tLxLh9U5aUyxwS3x-sfJ5NIXL8/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1gN1jTe44Mptx2dJNxAgQ3mJZAb5cqC2Y/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
@@ -63,6 +74,51 @@ const About = () => {
             />
           </div>
         </div>
+      </div>
+      
+      {/* LeetCode Stats Card */}
+      <div className="mt-12 bg-[#0a192f] border border-purple-500 p-6 rounded-xl shadow-lg text-center max-w-sm mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-[#8245ec] hover:border-purple-400 cursor-default">
+        <h3 className="text-white font-bold text-xl mb-4">LeetCode Statistics</h3>
+        
+        {stats ? (
+          <div className="grid grid-cols-3 gap-4">
+            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
+              <p className="text-orange-500 font-bold text-2xl">{stats.totalSolved}</p>
+              <p className="text-gray-400 text-xs uppercase">Solved</p>
+            </div>
+            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
+              <p className="text-green-500 font-bold text-2xl">{stats.easySolved}</p>
+              <p className="text-gray-400 text-xs uppercase">Easy</p>
+            </div>
+            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
+              <p className="text-yellow-500 font-bold text-2xl">{stats.mediumSolved}</p>
+              <p className="text-gray-400 text-xs uppercase">Medium</p>
+            </div>
+            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
+              <p className="text-red-500 font-bold text-2xl">{stats.hardSolved}</p>
+              <p className="text-gray-400 text-xs uppercase">Hard</p>
+            </div>
+            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
+              <p className="text-white font-bold text-2xl">{stats.acceptanceRate}</p>
+              <p className="text-gray-400 text-xs uppercase">Acceptance Rate</p>
+            </div>
+            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
+              <p className="text-white font-bold text-2xl">{stats.contributionPoints}</p>
+              <p className="text-gray-400 text-xs uppercase">Contribution Points</p>
+            </div>
+          </div>
+        ) : (
+          <p className="text-gray-400 animate-pulse">Loading Stats...</p>
+        )}
+        
+        <a 
+          href="https://leetcode.com/u/Indrajeet_Panjiyar/" 
+          target="_blank" 
+          rel="noreferrer"
+          className="mt-6 block text-sm text-blue-400 underline hover:text-[#8245ec] transition-colors duration-300"
+        >
+          View Profile
+        </a>
       </div>
     </section>
   );

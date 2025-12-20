@@ -3,16 +3,6 @@ import { TypeAnimation } from 'react-type-animation';
 import profileImage from '../../assets/profile.jpg';
 
 const About = () => {
-
-  // In your React component
-  const [stats, setStats] = useState(null);
-
-  useEffect(() => {
-    fetch('https://leetcode-stats-api.herokuapp.com/Indrajeet_Panjiyar')
-      .then(res => res.json())
-      .then(data => setStats(data));
-  }, []);
-
   return (
     <section
       id="about"
@@ -77,49 +67,33 @@ const About = () => {
       </div>
       
       {/* LeetCode Stats Card */}
-      <div className="mt-12 bg-[#0a192f] border border-purple-500 p-6 rounded-xl shadow-lg text-center max-w-sm mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-[#8245ec] hover:border-purple-400 cursor-default">
+      <div className="mt-12 bg-[#0a192f] border border-purple-500 p-6 rounded-xl shadow-lg text-center max-w-sm mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-[#8245ec]/20 hover:border-purple-400 cursor-default">
         <h3 className="text-white font-bold text-xl mb-4">LeetCode Statistics</h3>
         
-        {stats ? (
-          <div className="grid grid-cols-3 gap-4">
-            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
-              <p className="text-orange-500 font-bold text-2xl">{stats.totalSolved}</p>
-              <p className="text-gray-400 text-xs uppercase">Solved</p>
-            </div>
-            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
-              <p className="text-green-500 font-bold text-2xl">{stats.easySolved}</p>
-              <p className="text-gray-400 text-xs uppercase">Easy</p>
-            </div>
-            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
-              <p className="text-yellow-500 font-bold text-2xl">{stats.mediumSolved}</p>
-              <p className="text-gray-400 text-xs uppercase">Medium</p>
-            </div>
-            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
-              <p className="text-red-500 font-bold text-2xl">{stats.hardSolved}</p>
-              <p className="text-gray-400 text-xs uppercase">Hard</p>
-            </div>
-            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
-              <p className="text-white font-bold text-2xl">{stats.acceptanceRate}</p>
-              <p className="text-gray-400 text-xs uppercase">Acceptance Rate</p>
-            </div>
-            <div className="p-2 bg-gray-800 rounded transition-colors duration-300 hover:bg-gray-700">
-              <p className="text-white font-bold text-2xl">{stats.contributionPoints}</p>
-              <p className="text-gray-400 text-xs uppercase">Contribution Points</p>
-            </div>
-          </div>
-        ) : (
-          <p className="text-gray-400 animate-pulse">Loading Stats...</p>
-        )}
+        <div className="flex justify-center items-center py-2">
+          <a href="https://leetcode.com/u/Indrajeet_Panjiyar/" target="_blank" rel="noreferrer">
+            <img 
+              src="https://leetcode-badge-sage.vercel.app/badge/Indrajeet_Panjiyar?theme=dark" 
+              alt="Indrajeet's LeetCode Badge" 
+              className="w-full h-auto rounded-lg"
+            />
+          </a>
+        </div>
+
+        <p className="mt-4 text-gray-400 text-sm">
+          Actively solving problems to master Data Structures and Algorithms.
+        </p>
         
         <a 
           href="https://leetcode.com/u/Indrajeet_Panjiyar/" 
           target="_blank" 
           rel="noreferrer"
-          className="mt-6 block text-sm text-blue-400 underline hover:text-[#8245ec] transition-colors duration-300"
+          className="mt-6 inline-block w-full py-2 rounded-lg border border-[#8245ec] text-sm text-[#8245ec] font-medium hover:bg-[#8245ec] hover:text-white transition-all duration-300"
         >
           View Profile
         </a>
       </div>
+
     </section>
   );
 };

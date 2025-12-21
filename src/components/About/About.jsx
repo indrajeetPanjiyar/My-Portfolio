@@ -39,19 +39,33 @@ const About = () => {
             I am a final-year B.Tech student in Electrical and Electronics Engineering at NIT Andhra Pradesh with a deep specialization in Full Stack Development using the MERN stack. I have built and deployed scalable web applications—such as a real-time ride-hailing platform and an EdTech system—utilizing MongoDB, Express.js, React.js, and Node.js. I have a strong grasp of Data Structures and Algorithms in C++, having solved 250+ problems on LeetCode to sharpen my problem-solving skills, and I am well-versed in OOPs principles, REST APIs, and database management. With a solid foundation in both SQL and NoSQL databases, as well as version control using Git and GitHub.
           </p>
 
-          {/* Resume Button */}
-          <a
-            href="https://drive.google.com/file/d/1gN1jTe44Mptx2dJNxAgQ3mJZAb5cqC2Y/view?usp=drivesdk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
-            style={{
-              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-              boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
-            }}
-          >
-            MY RESUME
-          </a>
+          {/* Resume Button & Leetcode Profile*/}
+          <div className='flex md:justify-between flex-col md:flex-row items-center gap-4'>
+            <a
+              href="https://drive.google.com/file/d/1gN1jTe44Mptx2dJNxAgQ3mJZAb5cqC2Y/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
+              style={{
+                background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+                boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
+              }}
+            >
+              MY RESUME
+            </a>
+            <a
+              href="https://leetcode.com/u/Indrajeet_Panjiyar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
+              style={{
+                background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+                boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
+              }}
+            >
+              LeetCode Profile
+            </a>
+          </div>
           
         </div>
         {/* Right Side */}
@@ -67,7 +81,7 @@ const About = () => {
       </div>
       
       {/* LeetCode Stats Card */}
-      <div className="mt-12 bg-[#0a192f] border border-purple-500 p-6 rounded-xl shadow-lg text-center max-w-sm mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-[#8245ec]/20 hover:border-purple-400 cursor-default">
+      {/* <div className="mt-12 bg-[#0a192f] border border-purple-500 p-6 rounded-xl shadow-lg text-center max-w-sm mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-[#8245ec]/20 hover:border-purple-400 cursor-default">
         <h3 className="text-white font-bold text-xl mb-4">LeetCode Statistics</h3>
         
         <div className="flex justify-center items-center py-2">
@@ -92,7 +106,7 @@ const About = () => {
         >
           View Profile
         </a>
-      </div>
+      </div> */}
 
     </section>
   );

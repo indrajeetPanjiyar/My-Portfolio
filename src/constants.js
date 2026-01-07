@@ -109,7 +109,7 @@ export const SkillsInfo = [
       school: "National Institute of Technology Andhra Pradesh",
       date: "Nov 2022 - May 2026",
       grade: "7.05 CGPA",
-      desc: "I am a final-year B.Tech student in Electrical and Electronics Engineering at NIT Andhra Pradesh. Alongside my core studies, I have developed strong skills in Data Structures and Algorithms using C++ and gained hands-on experience in MERN stack development. I have a solid understanding of core computer science concepts such as DBMS and OOPs. My practical experience includes building several projects like an EdTech Platform using the MERN stack, a responsive Weather App in JavaScript, a Shopping Cart App in React, a Password Generator using HTML, CSS, and JavaScript, and a Razorpay Clone design created with Tailwind CSS.",
+      desc: "I am a final-year B.Tech student in Electrical and Electronics Engineering at NIT Andhra Pradesh.",
       degree: "Bachelor of Technology - B.Tech(EEE)",
     },
     {

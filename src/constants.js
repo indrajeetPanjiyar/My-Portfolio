@@ -108,7 +108,7 @@ export const SkillsInfo = [
       img: NITAPLogo,
       school: "National Institute of Technology Andhra Pradesh",
       date: "Nov 2022 - May 2026",
-      grade: "7.05 CGPA",
+      grade: "7.1 CGPA",
       desc: "I am a final-year B.Tech student in Electrical and Electronics Engineering at NIT Andhra Pradesh.",
       degree: "Bachelor of Technology - B.Tech(EEE)",
     },

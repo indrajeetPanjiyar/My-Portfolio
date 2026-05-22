@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import profileImage from '../../assets/profile.jpg';
 
@@ -42,7 +42,7 @@ const About = () => {
           {/* Resume Button & Leetcode Profile*/}
           <div className='flex md:justify-between flex-col md:flex-row items-center gap-4'>
             <a
-              href="https://drive.google.com/file/d/1NYXRotLp59QKO3_Az0RLfb6WV1sfxM88/view?usp=drivesdk"
+              href="https://drive.google.com/drive/u/0/folders/1614J8R-5ksU7mmZnFzD2WwcB1-Gr_5OK"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"

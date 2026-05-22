@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useMemo } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,13 +9,13 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef(null);
 
-  const menuItems = [
+  const menuItems = useMemo(() => [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "work", label: "Projects" },
     { id: "certificates", label: "Certificates" },
     { id: "education", label: "Education" },
-  ];
+  ], []);
 
   // Detect scroll position for background + active section
   useEffect(() => {

@@ -36,13 +36,14 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a final-year B.Tech student in Electrical and Electronics Engineering at NIT Andhra Pradesh with a deep specialization in Full Stack Development using the MERN stack. I have built and deployed scalable web applications—such as a real-time ride-hailing platform and an EdTech system—utilizing MongoDB, Express.js, React.js, and Node.js. I have a strong grasp of Data Structures and Algorithms in C++, having solved 250+ problems on LeetCode to sharpen my problem-solving skills, and I am well-versed in OOPs principles, REST APIs, Database management, and Operating System fundamentals. With a solid foundation in both SQL and NoSQL databases, as well as version control using Git and GitHub.
+            B.Tech graduate in Electrical and Electronics Engineering from NIT Andhra Pradesh with a deep specialization in Full Stack Development using the MERN
+            stack. I have built and deployed full-stack applications, including a real-time ride-hailing platform, an EdTech platform, and an AI-powered interview preparation system, utilizing MongoDB, Express.js, React.js, Node.js, REST APIs, and Google Gemini AI to solve real-world problems at scale. I have a good grasp of Data Structures and Algorithms, having solved 300+ problems on LeetCode to sharpen my problem-solving skills. I am well-versed in OOPs principles, REST APIs, DBMS, and Operating System fundamentals, with experience building AI-integrated web applications, With a solid foundation in both SQL and NoSQL databases, as well as version control using Git and GitHub.
           </p>
 
           {/* Resume Button & Leetcode Profile*/}
           <div className='flex md:justify-between flex-col md:flex-row items-center gap-4'>
             <a
-              href="https://drive.google.com/file/d/1BKFQj6LSAZY71ZaPhiARwR9Ovp44hI3P/view?usp=drive_link"
+              href="https://drive.google.com/drive/folders/1obEOREtQVFUzwrRmRVX4sPVEnmeq1pie?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"

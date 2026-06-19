@@ -21,6 +21,7 @@ import postmanLogo from './assets/tech_logo/postman.png';
 import mcLogo from './assets/tech_logo/mc.png';
 import figmaLogo from './assets/tech_logo/figma.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
+import awsLogo from './assets/tech_logo/awsLogo.png';
 
 
 // Education Section Logo's
@@ -36,6 +37,7 @@ import PasswordGenerator from './assets/work_logo/Password Generator.png';
 import BlogWeb from "./assets/work_logo/BlogWebsite.png";
 import ENTNT_Talentflow from "./assets/work_logo/ENTNT_Talentflow.png";
 import Uber_Clone from "./assets/work_logo/Uber_Logo.png"
+import interview_prep from "./assets/work_logo/Interview-AI.png";
 
 export const certificates = [
   {
@@ -93,6 +95,7 @@ export const SkillsInfo = [
       { name: 'Git', logo: gitLogo },
       { name: 'GitHub', logo: githubLogo },
       { name: 'VS Code', logo: vscodeLogo },
+      { name: 'AWS', logo: awsLogo },
       { name: 'Postman', logo: postmanLogo },
       { name: 'Compass', logo: mcLogo },
       { name: 'Vercel', logo: vercelLogo },
@@ -154,6 +157,15 @@ export const SkillsInfo = [
     },
     {
       id: 2,
+      title: "AI-Powered Interview Preparation System",
+      description: "An AI-driven interview preparation platform that generates personalized coding challenges and mock interviews based on user-selected topics and difficulty levels. The system leverages Google Gemini AI to create dynamic problem sets, provides real-time feedback, and tracks user progress over time, helping candidates effectively prepare for technical interviews.",
+      image: interview_prep,
+      tags: ["React", "Node.js", "MongoDB", "Express.js", "Google Gemini AI"],
+      github: "https://github.com/indrajeetPanjiyar/INTERVIEW-AI",
+      webapp: "",
+    },
+    {
+      id: 3,
       title: "ENTNT_Talentflow - Job Portal Website",
       description: "TalentFlow is a React-based hiring management platform that streamlines recruitment by allowing HR teams to create jobs, manage candidates through various stages, and design role-specific assessments — all within a sleek, responsive interface. Built with Vite, Tailwind CSS, and IndexedDB for client-side data persistence, it delivers a seamless, backend-free experience with real-time updates and intuitive workflows.",
       image: ENTNT_Talentflow,
@@ -162,7 +174,7 @@ export const SkillsInfo = [
       webapp: "https://entnt-talentflow-inky.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
       title: "WeatherApp",
       description:
         "This is a responsive, modern web application that fetches and displays real-time weather data using the OpenWeatherMap API. Built with plain HTML, CSS, and JavaScript, the app allows users to search any city globally and view current weather details—temperature, “feels like” reading, humidity, wind speed, and descriptive conditions. It dynamically updates a weather icon based on conditions and is styled with a clean, minimal UI to ensure readability and usability across devices. This project demonstrates my front-end skills in DOM manipulation, asynchronous API calls (fetch), responsive design, and handling real-world data integration.",
@@ -172,7 +184,7 @@ export const SkillsInfo = [
       webapp: "https://weather-app-ten-omega-74.vercel.app/",
     },
     {
-      id: 4,
+      id: 5,
       title: "React Redux Shopping App",
       description:
         "This is a modern e-commerce prototype built using React and Redux Toolkit to manage state across the application. Users can browse a list of products, add or remove items from their cart, adjust quantities, and see the total price automatically updated in real time. The cart state is persisted via Redux slices and global store architecture. The UI is styled using CSS (or Tailwind CSS) to deliver a clean, responsive experience. Key functionalities include clearing the entire cart, handling edge cases (e.g. zero quantity), and seamless user experience transitions. This project highlights my skills in component-based architecture, state management, event handling, and front-end best practices in a React + Redux environment.",
@@ -182,7 +194,7 @@ export const SkillsInfo = [
       webapp: "https://react-redux-shopping-app-nine.vercel.app/",
     },
     {
-      id: 5,
+      id: 6,
       title: "Password Generator",
       description:
         "This project is a lightweight, interactive web app built with HTML, CSS, and JavaScript that helps users generate strong, randomized passwords. Users can specify criteria such as length, inclusion of uppercase/lowercase letters, numbers, and special symbols. The app ensures password complexity and prevents predictable patterns, making it ideal for everyday use. Through this project, I demonstrated skills in DOM manipulation, event handling, and logic for randomization. It reflects my understanding of user-centric design and front-end development fundamentals—especially how to build intuitive tools that meet real security needs.",
@@ -192,7 +204,7 @@ export const SkillsInfo = [
       webapp: "",
     },
     {
-      id: 6,
+      id: 7,
       title: "React Blog Website",
       description:
         "This is a dynamic, responsive blog site built using React, React Router, and the Context API, styled beautifully with Tailwind CSS. Users can view a list of blog posts, filter by categories and tags, and navigate seamlessly between pages thanks to client-side routing. Global state management via React’s Context ensures clean handling of things like category/tag filters. The UI is mobile-friendly, modern, and designed with usability in mind. Under the hood, it’s a Create React App setup, structured with reusable components, pages, and context logic. This project demonstrates my frontend skills: component architecture, routing, state management, filtering logic, and responsive design.",
